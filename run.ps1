@@ -916,7 +916,7 @@ if ($podcasts_on) {
 if (!($podcasts_off) -and !($podcasts_on)) {
 
     do {
-        $ch = Read-Host -Prompt ($lang).PodcatsSelect
+        $ch = Read-Host -Prompt ($lang).PodcatsSelect -ForegroundColor Green
         Write-Host
         if (!($ch -eq 'n' -or $ch -eq 'y')) { incorrectValue }
     }
@@ -940,7 +940,7 @@ if ($block_update_off) {
 }
 if (!($block_update_on) -and !($block_update_off)) {
     do {
-        $text_upd = [string]($lang).UpdSelect + $upd
+        $text_upd = [string]($lang).UpdSelect + $upd -ForegroundColor Green
         $ch = Read-Host -Prompt $text_upd
         Write-Host
         if (!($ch -eq 'n' -or $ch -eq 'y')) { incorrectValue } 
