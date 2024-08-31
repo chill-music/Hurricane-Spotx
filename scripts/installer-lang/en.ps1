@@ -42,6 +42,7 @@
     Spicetify       = "Spicetify detected, it must be installed after SpotX, open recommended actions in FAQ ? [Y/N]"
     NoRestore       = "SpotX has already been installed, xpui.bak not found. `nPlease uninstall Spotify client and run Install.bat again"
     InstallComplete = "installation completed"
+    InstallComplete2 = "Patched completed by Shehab"
     HostInfo        = "Unwanted URLs found in hosts file"
     HostBak         = "Backing up hosts.bak..."
     HostDel         = "Trying to remove unwanted URLs from the original hosts file..."
