@@ -916,7 +916,7 @@ if ($podcasts_on) {
 if (!($podcasts_off) -and !($podcasts_on)) {
 
     do {
-        $ch = Read-Host -Prompt ($lang).PodcatsSelect -ForegroundColor Green
+        $ch = Read-Host -Prompt ($lang).PodcatsSelect
         Write-Host
         if (!($ch -eq 'n' -or $ch -eq 'y')) { incorrectValue }
     }
