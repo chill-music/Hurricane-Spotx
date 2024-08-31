@@ -296,8 +296,8 @@ if ($psv -ge 7) {
 function CallLang($clg) {
 
     $urlLang = switch ($mirror) {
-        $true { "https://hurricane-spotx-official.github.io/SpotX/scripts/installer-lang/$clg.ps1" }
-        default { "https://raw.githubusercontent.com/SpotX-Official/SpotX/main/scripts/installer-lang/$clg.ps1" }
+        $true { "https://spotx-official.github.io/SpotX/scripts/installer-lang/$clg.ps1" }
+        default { "https://raw.githubusercontent.com/chill-music/Hurricane-Spotx/main/scripts/installer-lang/$clg.ps1" }
     }
     
     $ProgressPreference = 'SilentlyContinue'
@@ -893,8 +893,8 @@ $ch = $null
 if ($langCode -eq 'ru' -and [version]$offline -ge [version]"1.1.92.644") { 
     
     $urlru = switch ($mirror) {
-        $true { "https://hurricane-spotx-official.github.io/SpotX/patches/Augmented%20translation/ru.json" }
-        default { "https://raw.githubusercontent.com/SpotX-Official/SpotX/main/patches/Augmented%20translation/ru.json" }
+        $true { "https://spotx-official.github.io/SpotX/patches/Augmented%20translation/ru.json" }
+        default { "https://raw.githubusercontent.com/chill-music/Hurricane-Spotx/main/patches/Augmented%20translation/ru.json" }
     }
 
     $webjsonru = Get -Url $urlru
@@ -967,8 +967,8 @@ $ch = $null
 
 
 $url = switch ($mirror) {
-    $true { "https://hurricane-spotx-official.github.io/SpotX/patches/patches.json" }
-    default { "https://raw.githubusercontent.com/SpotX-Official/SpotX/main/patches/patches.json" }
+    $true { "https://spotx-official.github.io/SpotX/patches/patches.json" }
+    default { "https://raw.githubusercontent.com/chill-music/Hurricane-Spotx/main/patches/patches.json" }
 }
 
 $webjson = Get -Url $url -RetrySeconds 5
@@ -1678,8 +1678,8 @@ If ($test_spa) {
     if ($podcast_off -or $adsections_off) {
 
         $url = switch ($mirror) {
-            $true { "https://hurricane-spotx-official.github.io/SpotX/js-helper/sectionBlock.js" }
-            default { "https://raw.githubusercontent.com/SpotX-Official/SpotX/main/js-helper/sectionBlock.js" }
+            $true { "https://spotx-official.github.io/SpotX/js-helper/sectionBlock.js" }
+            default { "https://raw.githubusercontent.com/chill-music/Hurricane-Spotx/main/js-helper/sectionBlock.js" }
         }
         $section = Get -Url $url
         

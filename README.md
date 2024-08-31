@@ -1,11 +1,11 @@
   <p align="center">
-  <a href="https://github.com/SpotX-Official/SpotX/releases"><img src="https://spotx-official.github.io/images/logos/logo.png" /></a>
+  <a href="https://github.com/chill-music/Hurricane-Spotx/releases"><img src="https://spotx-official.github.io/images/logos/logo.png" /></a>
 </p>
 
 <p align="center">        
       <a href="https://t.me/spotify_windows_mod"><img src="https://spotx-official.github.io/images/shields/SpotX_Channel.svg"></a>
       <a href="https://t.me/SpotxCommunity"><img src="https://spotx-official.github.io/images/shields/SpotX_Community.svg"></a>
-      <a href="https://github.com/SpotX-Official/SpotX-Bash"><img src="https://spotx-official.github.io/images/shields/SpotX_for_Mac&Linux.svg"></a>
+      <a href="https://github.com/chill-music/Hurricane-Spotx-Bash"><img src="https://spotx-official.github.io/images/shields/SpotX_for_Mac&Linux.svg"></a>
       <a href="https://telegra.ph/SpotX-FAQ-09-19"><img src="https://spotx-official.github.io/images/shields/faq.svg"></a>
       </p>
 
@@ -23,7 +23,7 @@
 - <strong>Blocks all banner, video and audio ads in the client</strong>
 - <strong>Hiding podcasts, episodes and audiobooks from the homepage (optional)</strong>
 - <strong>Block Spotify automatic updates (optional)</strong>
-- <strong>More experimental features have been activated ([see the full list](https://github.com/SpotX-Official/SpotX/discussions/50))</strong>
+- <strong>More experimental features have been activated ([see the full list](https://github.com/chill-music/Hurricane-Spotx/discussions/50))</strong>
 - <strong>Disabled sentry's console log/error/warning messages to Spotify developers, halted user interaction logging, eliminated right-to-left CSS rules for simplification, and performed code minification</strong> 
 
 <h1>Fast installation / Update</h1>
@@ -34,7 +34,7 @@
   #### During installation, you need to confirm some actions, also contains:
   
   - New theme activated (new right and left sidebar, some cover change)
-  - All [experimental features](https://github.com/SpotX-Official/SpotX/discussions/50) included
+  - All [experimental features](https://github.com/chill-music/Hurricane-Spotx/discussions/50) included
 
   <h4> </h4>
   
@@ -45,7 +45,7 @@ or
 #### Run The following command in PowerShell:
 
 ```ps1
-iex "& { $(iwr -useb 'https://raw.githubusercontent.com/SpotX-Official/spotx-official.github.io/main/run.ps1') } -new_theme"
+iex "& { $(iwr -useb 'https://raw.githubusercontent.com/chill-music/hurricane-spotx-official.github.io/main/run.ps1') } -new_theme"
 ```
 
 #### mirror
@@ -64,7 +64,7 @@ iex "& { $(iwr -useb 'https://spotx-official.github.io/run.ps1') } -m -new_theme
   - Forced installation of version 1.2.13 (since the old theme was removed in subsequent versions)
   - Old theme activated
   - Automatic blocking of Spotify updates
-  - All [experimental features](https://github.com/SpotX-Official/SpotX/discussions/50) included
+  - All [experimental features](https://github.com/chill-music/Hurricane-Spotx/discussions/50) included
 
   <h4> </h4>
   
@@ -75,7 +75,7 @@ or
 #### Run The following command in PowerShell:
 
 ```ps1
-iex "& { $(iwr -useb 'https://raw.githubusercontent.com/SpotX-Official/spotx-official.github.io/main/run.ps1') } -v 1.2.13.661.ga588f749-4064 -confirm_spoti_recomended_over -block_update_on"
+iex "& { $(iwr -useb 'https://raw.githubusercontent.com/chill-music/hurricane-spotx-official.github.io/main/run.ps1') } -v 1.2.13.661.ga588f749-4064 -confirm_spoti_recomended_over -block_update_on"
 ```
 
 #### mirror
@@ -93,9 +93,9 @@ iex "& { $(iwr -useb 'https://spotx-official.github.io/run.ps1') } -m -v 1.2.13.
   
   - New theme activated (new right and left sidebar, some cover change)
   - Hiding podcasts/episodes/audiobooks from the homepage
-  - Activated [static theme](https://github.com/SpotX-Official/SpotX/discussions/50#discussioncomment-4096066) <kbd>spotify</kbd> for lyrics
-  - Hiding [ad-like sections](https://github.com/SpotX-Official/SpotX/discussions/50#discussioncomment-4478943)
-  - All [experimental features](https://github.com/SpotX-Official/SpotX/discussions/50) included
+  - Activated [static theme](https://github.com/chill-music/Hurricane-Spotx/discussions/50#discussioncomment-4096066) <kbd>spotify</kbd> for lyrics
+  - Hiding [ad-like sections](https://github.com/chill-music/Hurricane-Spotx/discussions/50#discussioncomment-4478943)
+  - All [experimental features](https://github.com/chill-music/Hurricane-Spotx/discussions/50) included
   - Removal of Spotify MS if it was found 
   - Installation of the recommended version of Spotify (if another client has already been found, it will be installed over) 
   - Blocking of Spotify updates
@@ -110,7 +110,7 @@ or
 #### Run The following command in PowerShell:
 
 ```ps1
-iex "& { $(iwr -useb 'https://raw.githubusercontent.com/SpotX-Official/spotx-official.github.io/main/run.ps1') } -confirm_uninstall_ms_spoti -confirm_spoti_recomended_over -podcasts_off -block_update_on -start_spoti -new_theme -adsections_off -lyrics_stat spotify"
+iex "& { $(iwr -useb 'https://raw.githubusercontent.com/chill-music/hurricane-spotx-official.github.io/main/run.ps1') } -confirm_uninstall_ms_spoti -confirm_spoti_recomended_over -podcasts_off -block_update_on -start_spoti -new_theme -adsections_off -lyrics_stat spotify"
 ```
 
 #### mirror
@@ -131,7 +131,7 @@ iex "& { $(iwr -useb 'https://spotx-official.github.io/run.ps1') } -m -confirm_u
   
   - New theme activated (new right and left sidebar, some cover change)
   - Disabled only audio ads in podcasts
-  - All [experimental features](https://github.com/SpotX-Official/SpotX/discussions/50) included
+  - All [experimental features](https://github.com/chill-music/Hurricane-Spotx/discussions/50) included
 
   <h4> </h4>
   
@@ -142,7 +142,7 @@ or
 #### Run The following command in PowerShell:
 
 ```ps1
-iex "& { $(iwr -useb 'https://raw.githubusercontent.com/SpotX-Official/spotx-official.github.io/main/run.ps1') } -premium -new_theme"
+iex "& { $(iwr -useb 'https://raw.githubusercontent.com/chill-music/hurricane-spotx-official.github.io/main/run.ps1') } -premium -new_theme"
 ```
 
 #### mirror
@@ -156,7 +156,7 @@ iex "& { $(iwr -useb 'https://spotx-official.github.io/run.ps1') } -m -premium -
 <details>
 <summary><small>Installing with parameters</small></summary><p>
 
-You can specify various parameters for a more flexible installation, more [details here](https://github.com/SpotX-Official/SpotX/discussions/60)
+You can specify various parameters for a more flexible installation, more [details here](https://github.com/chill-music/Hurricane-Spotx/discussions/60)
 
 </details>
 

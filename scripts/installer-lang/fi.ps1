@@ -1,8 +1,8 @@
 [PSCustomObject]@{
     Welcome         = "
-╔═════════════════════════════════════════╗
-║ Tervetuloa Hurricane-SpotX:n Windowsiin ║
-╚═════════════════════════════════════════╝"
+╔═══════════════════════════════╗
+║ Tervetuloa SpotX:n Windowsiin ║
+╚═══════════════════════════════╝"
     Incorrect       = "Hupsista, väärä arvo,"
     Incorrect2      = "Syötä uudelleen "
     Download        = "Latauksen aikana tapahtui virhe"
