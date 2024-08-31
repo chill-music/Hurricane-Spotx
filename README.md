@@ -45,7 +45,7 @@ or
 #### Run The following command in PowerShell:
 
 ```ps1
-iex "& { $(iwr -useb 'https://raw.githubusercontent.com/chill-music/hurricane-hurricane-spotx-official.github.io/main/run.ps1') } -new_theme"
+iex "& { $(iwr -useb 'https://raw.githubusercontent.com/chill-music/hurricane-spotx-official.github.io/main/run.ps1') } -new_theme"
 ```
 
 #### mirror
@@ -75,7 +75,7 @@ or
 #### Run The following command in PowerShell:
 
 ```ps1
-iex "& { $(iwr -useb 'https://raw.githubusercontent.com/chill-music/hurricane-hurricane-spotx-official.github.io/main/run.ps1') } -v 1.2.13.661.ga588f749-4064 -confirm_spoti_recomended_over -block_update_on"
+iex "& { $(iwr -useb 'https://raw.githubusercontent.com/chill-music/hurricane-spotx-official.github.io/main/run.ps1') } -v 1.2.13.661.ga588f749-4064 -confirm_spoti_recomended_over -block_update_on"
 ```
 
 #### mirror
@@ -110,7 +110,7 @@ or
 #### Run The following command in PowerShell:
 
 ```ps1
-iex "& { $(iwr -useb 'https://raw.githubusercontent.com/chill-music/hurricane-hurricane-spotx-official.github.io/main/run.ps1') } -confirm_uninstall_ms_spoti -confirm_spoti_recomended_over -podcasts_off -block_update_on -start_spoti -new_theme -adsections_off -lyrics_stat spotify"
+iex "& { $(iwr -useb 'https://raw.githubusercontent.com/chill-music/hurricane-spotx-official.github.io/main/run.ps1') } -confirm_uninstall_ms_spoti -confirm_spoti_recomended_over -podcasts_off -block_update_on -start_spoti -new_theme -adsections_off -lyrics_stat spotify"
 ```
 
 #### mirror
@@ -142,7 +142,7 @@ or
 #### Run The following command in PowerShell:
 
 ```ps1
-iex "& { $(iwr -useb 'https://raw.githubusercontent.com/chill-music/hurricane-hurricane-spotx-official.github.io/main/run.ps1') } -premium -new_theme"
+iex "& { $(iwr -useb 'https://raw.githubusercontent.com/chill-music/hurricane-spotx-official.github.io/main/run.ps1') } -premium -new_theme"
 ```
 
 #### mirror
