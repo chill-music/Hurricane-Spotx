@@ -1,8 +1,8 @@
 [PSCustomObject]@{
     Welcome         = "
-╔══════════════════════════════════╗
-║ Bienvenue sur SpotX pour Windows ║
-╚══════════════════════════════════╝"
+╔════════════════════════════════════════════╗
+║ Bienvenue sur Hurricane-SpotX pour Windows ║
+╚════════════════════════════════════════════╝"
     Incorrect       = "Oups, une valeur est incorrecte,"
     Incorrect2      = "veuillez recommencer "
     Download        = "Erreur durant le téléchargement"
