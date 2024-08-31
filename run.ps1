@@ -296,7 +296,7 @@ if ($psv -ge 7) {
 function CallLang($clg) {
 
     $urlLang = switch ($mirror) {
-        $true { "https://spotx-official.github.io/SpotX/scripts/installer-lang/$clg.ps1" }
+        $true { "https://hurricane-spotx-official.github.io/SpotX/scripts/installer-lang/$clg.ps1" }
         default { "https://raw.githubusercontent.com/chill-music/Hurricane-Spotx/main/scripts/installer-lang/$clg.ps1" }
     }
     
@@ -893,7 +893,7 @@ $ch = $null
 if ($langCode -eq 'ru' -and [version]$offline -ge [version]"1.1.92.644") { 
     
     $urlru = switch ($mirror) {
-        $true { "https://spotx-official.github.io/SpotX/patches/Augmented%20translation/ru.json" }
+        $true { "https://hurricane-spotx-official.github.io/SpotX/patches/Augmented%20translation/ru.json" }
         default { "https://raw.githubusercontent.com/chill-music/Hurricane-Spotx/main/patches/Augmented%20translation/ru.json" }
     }
 
@@ -967,7 +967,7 @@ $ch = $null
 
 
 $url = switch ($mirror) {
-    $true { "https://spotx-official.github.io/SpotX/patches/patches.json" }
+    $true { "https://hurricane-spotx-official.github.io/SpotX/patches/patches.json" }
     default { "https://raw.githubusercontent.com/chill-music/Hurricane-Spotx/main/patches/patches.json" }
 }
 
@@ -1678,7 +1678,7 @@ If ($test_spa) {
     if ($podcast_off -or $adsections_off) {
 
         $url = switch ($mirror) {
-            $true { "https://spotx-official.github.io/SpotX/js-helper/sectionBlock.js" }
+            $true { "https://hurricane-spotx-official.github.io/SpotX/js-helper/sectionBlock.js" }
             default { "https://raw.githubusercontent.com/chill-music/Hurricane-Spotx/main/js-helper/sectionBlock.js" }
         }
         $section = Get -Url $url
