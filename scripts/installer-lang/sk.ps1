@@ -1,7 +1,7 @@
 [PSCustomObject]@{
     Welcome         = "
       ╔════════════════════════════════════════╗
-      ║ Welcome to Hurricane-SpotX for Windows1 ║
+      ║ Welcome to Hurricane-SpotX for Windows ║
       ╚════════════════════════════════════════╝"
     Incorrect       = "Ups, nesprávna hodnota,"
     Incorrect2      = "zadaj znova cez "
