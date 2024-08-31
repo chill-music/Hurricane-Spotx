@@ -1560,7 +1560,7 @@ function injection {
 }
 
 
-Write-Host ($lang).ModSpoti`n
+Write-Host ($lang).ModSpoti`n -ForegroundColor Red
 
 $tempDirectory = $PWD
 Pop-Location
@@ -1839,3 +1839,4 @@ extract -counts 'exe' -helper 'Binary'
 if ($start_spoti) { Start-Process -WorkingDirectory $spotifyDirectory -FilePath $spotifyExecutable }
 
 Write-Host ($lang).InstallComplete`n -ForegroundColor Green
+Write-Host ($lang).InstallComplete2`n -ForegroundColor Red
