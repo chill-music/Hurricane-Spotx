@@ -42,7 +42,7 @@
     Spicetify       = "Spicetify détecté, il faut l'installer après SpotX, ouvrir les actions recommandées dans la FAQ ? [Y/N]"
     NoRestore       = "SpotX a déjà été installé, xpui.bak introuvable. `nMerci de désinstaller Spotify et de lancer à nouveau le script"
     InstallComplete = "installation terminée"
-    InstallComplete2 = "Modification terminée by Shehab"
+    InstallComplete2 = "Modification terminée Par: Shehab"
     HostInfo        = "URLs indésirables trouvées dans le fichier hosts"
     HostBak         = "Sauvegarde de hosts.bak..."
     HostDel         = "Tentative de suppression des URLs indésirables du fichier hosts original..."
