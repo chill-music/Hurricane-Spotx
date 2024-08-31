@@ -1560,7 +1560,7 @@ function injection {
 }
 
 
-Write-Host ($lang).ModSpoti`n
+Write-Host ($lang).ModSpoti`n -ForegroundColor Red
 
 $tempDirectory = $PWD
 Pop-Location
