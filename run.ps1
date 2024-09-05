@@ -299,7 +299,7 @@ function Get-Link {
     )
 
     switch ($mirror) {
-        $true { return "https://chill-music/hurricane-spotx-official.github.io" + $endlink }
+        $true { return "https://github.com/chill-music/hurricane-spotx-official.github.io" + $endlink }
         default { return "https://raw.githubusercontent.com/chill-music/Hurricane-Spotx" + $endlink }
     }
 }
@@ -1565,7 +1565,7 @@ function injection {
 }
 
 
-Write-Host ($lang).ModSpoti`n -ForegroundColor Red
+Write-Host ($lang).ModSpoti`n
 
 $tempDirectory = $PWD
 Pop-Location
@@ -1849,4 +1849,3 @@ extract -counts 'exe' -helper 'Binary'
 if ($start_spoti) { Start-Process -WorkingDirectory $spotifyDirectory -FilePath $spotifyExecutable }
 
 Write-Host ($lang).InstallComplete`n -ForegroundColor Green
-Write-Host ($lang).InstallComplete2`n -ForegroundColor Red
