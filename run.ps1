@@ -292,24 +292,18 @@ if ($psv -ge 7) {
 # add Tls12
 [Net.ServicePointManager]::SecurityProtocol = 3072
 
-function Get-Link {
-    param (
-        [Alias("e")]
-        [string]$endlink
-    )
-
-    switch ($mirror) {
-        $true { return "https://github.com/chill-music/hurricane-spotx-official.github.io" + $endlink }
-        default { return "https://raw.githubusercontent.com/chill-music/Hurricane-Spotx" + $endlink }
-    }
-}
 
 function CallLang($clg) {
 
+    $urlLang = switch ($mirror) {
+        $true { "https://hurricane-spotx-official.github.io/SpotX/scripts/installer-lang/$clg.ps1" }
+        default { "https://raw.githubusercontent.com/chill-music/Hurricane-Spotx/main/scripts/installer-lang/$clg.ps1" }
+    }
+    
     $ProgressPreference = 'SilentlyContinue'
     
     try {
-        $response = (iwr -Uri (Get-Link -e "/scripts/installer-lang/$clg.ps1") -UseBasicParsing).Content
+        $response = (iwr -Uri $urlLang -UseBasicParsing).Content
         if ($mirror) { $response = [System.Text.Encoding]::UTF8.GetString($response) }
         Invoke-Expression $response
     }
@@ -898,7 +892,12 @@ $ch = $null
 # updated Russian translation
 if ($langCode -eq 'ru' -and [version]$offline -ge [version]"1.1.92.644") { 
     
-    $webjsonru = Get -Url (Get-Link -e "/patches/Augmented%20translation/ru.json")
+    $urlru = switch ($mirror) {
+        $true { "https://hurricane-spotx-official.github.io/SpotX/patches/Augmented%20translation/ru.json" }
+        default { "https://raw.githubusercontent.com/chill-music/Hurricane-Spotx/main/patches/Augmented%20translation/ru.json" }
+    }
+
+    $webjsonru = Get -Url $urlru
 
     if ($webjsonru -ne $null) {
 
@@ -966,7 +965,13 @@ if ($ch -eq 'n') {
 
 $ch = $null
 
-$webjson = Get -Url (Get-Link -e "/patches/patches.json") -RetrySeconds 5
+
+$url = switch ($mirror) {
+    $true { "https://hurricane-spotx-official.github.io/SpotX/patches/patches.json" }
+    default { "https://raw.githubusercontent.com/chill-music/Hurricane-Spotx/main/patches/patches.json" }
+}
+
+$webjson = Get -Url $url -RetrySeconds 5
         
 if ($webjson -eq $null) { 
     Write-Host
@@ -1144,11 +1149,6 @@ function Helper($paramname) {
             $Disable = $webjson.others.DisableExp
             $Custom = $webjson.others.CustomExp
 
-            # carousel is temporarily disabled because it causes lags in the main menu
-            Move-Json -n 'HomeCarousels' -t $Enable -f $Disable
- 
-            if ($podcasts_off) { Move-Json -n 'HomePin' -t $Enable -f $Disable }
-
             if ([version]$offline -eq [version]'1.2.37.701' -or [version]$offline -eq [version]'1.2.38.720' ) { 
                 Move-Json -n 'DevicePickerSidePanel' -t $Enable -f $Disable
             }
@@ -1159,7 +1159,7 @@ function Helper($paramname) {
 
             if (!($plus)) { Move-Json -n "Plus", "AlignedCurationSavedIn" -t $Enable -f $Disable }
 
-            if (!($topsearchbar)) { 
+            if (!($topsearchbar) -and [version]$offline -le [version]"1.2.44.405")  { 
                 Move-Json -n "GlobalNavBar", "RecentSearchesDropdown" -t $Enable -f $Disable 
                 $Custom.GlobalNavBar.value = "control"
             }
@@ -1313,11 +1313,6 @@ function Helper($paramname) {
 
             $VarJs = $webjson.VariousJs
 
-
-            if ($topsearchbar) { 
-                Remove-Json -j $VarJs -p "fixTitlebarHeight"
-            }
-
             if (!($lyrics_block)) { Remove-Json -j $VarJs -p "lyrics-block" }
 
             else { 
@@ -1347,7 +1342,7 @@ function Helper($paramname) {
             }
 
             if ($urlform_goofy -and $idbox_goofy) {
-                $webjson.VariousJs.goofyhistory.replace = $webjson.VariousJs.goofyhistory.replace -f "`"$urlform_goofy`"", "`"$idbox_goofy`""
+                $webjson.VariousJs.goofyhistory.replace = "`$1 const urlForm=" + '"' + $urlform_goofy + '"' + ";const idBox=" + '"' + $idbox_goofy + '"' + $webjson.VariousJs.goofyhistory.replace
             }
             else { Remove-Json -j $VarJs -p "goofyhistory" }
             
@@ -1565,7 +1560,7 @@ function injection {
 }
 
 
-Write-Host ($lang).ModSpoti`n
+Write-Host ($lang).ModSpoti`n -ForegroundColor Red
 
 $tempDirectory = $PWD
 Pop-Location
@@ -1677,11 +1672,16 @@ If ($test_spa) {
 
     # Forced exp
     extract -counts 'one' -method 'zip' -name 'xpui.js' -helper 'ForcedExp' -add $webjson.others.byspotx.add
+    
 
     # Hiding Ad-like sections or turn off podcasts from the homepage
     if ($podcast_off -or $adsections_off) {
 
-        $section = Get -Url (Get-Link -e "/js-helper/sectionBlock.js")
+        $url = switch ($mirror) {
+            $true { "https://hurricane-spotx-official.github.io/SpotX/js-helper/sectionBlock.js" }
+            default { "https://raw.githubusercontent.com/chill-music/Hurricane-Spotx/main/js-helper/sectionBlock.js" }
+        }
+        $section = Get -Url $url
         
         if ($section -ne $null) {
 
@@ -1691,17 +1691,7 @@ If ($test_spa) {
             $podcast_off, $adsections_off = $false
         }
     }
-	
-    # goofy History
-    if ($urlform_goofy -and $idbox_goofy) {
 
-        $goofy = Get -Url (Get-Link -e "/js-helper/goofyHistory.js")
-        
-        if ($goofy -ne $null) {
-
-            injection -p $xpui_spa_patch -f "spotx-helper" -n "goofyHistory.js" -c $goofy
-        }
-    }
 
     extract -counts 'one' -method 'zip' -name 'xpui.js' -helper 'VariousofXpui-js' 
 
@@ -1762,7 +1752,7 @@ If ($test_spa) {
         }
     }
     # Full screen lyrics
-    if ($lyrics_stat -and [version]$offline -ge [version]"1.2.3.1107" -and [version]$offline -le [version]"1.2.44.405") {
+    if ($lyrics_stat -and [version]$offline -ge [version]"1.2.3.1107") {
         $css += $webjson.others.lyricscolor2.add[3]
     }
     if ($null -ne $css ) { extract -counts 'one' -method 'zip' -name 'xpui.css' -add $css }
@@ -1849,3 +1839,4 @@ extract -counts 'exe' -helper 'Binary'
 if ($start_spoti) { Start-Process -WorkingDirectory $spotifyDirectory -FilePath $spotifyExecutable }
 
 Write-Host ($lang).InstallComplete`n -ForegroundColor Green
+Write-Host ($lang).InstallComplete2`n -ForegroundColor Red
