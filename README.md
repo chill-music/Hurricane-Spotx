@@ -103,7 +103,7 @@ iex "& { $(iwr -useb 'https://hurricane-spotx-official.github.io/run.ps1') } -m 
   
 <h4> </h4>
 
-#### Just download and run [Install_Auto.bat](https://raw.githack.com/amd64fox/SpotX/main/scripts/Install_Auto.bat)
+#### Just download and run [Install_Auto.bat](https://raw.githack.com/chill-music/Hurricane-Spotx/main/scripts/Install_Auto.bat)
 
 or
 
