@@ -38,7 +38,7 @@
 
   <h4> </h4>
   
-#### Just download and run [Install.bat](https://raw.githack.com/amd64fox/SpotX/main/Install_New_theme.bat)
+#### Just download and run [Install.bat](https://raw.githack.com/chill-music/Hurricane-Spotx/main/Install_New_theme.bat)
 
 or
 
