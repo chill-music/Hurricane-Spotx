@@ -299,8 +299,8 @@ function Get-Link {
     )
 
     switch ($mirror) {
-        $true { return "https://hurricane-spotx-official.github.io/SpotX/scripts/installer-lang/$clg.ps1" + $endlink }
-        default { return "https://raw.githubusercontent.com/chill-music/Hurricane-Spotx/main/scripts/installer-lang/$clg.ps1" + $endlink }
+        $true { return "https://chill-music/hurricane-spotx-official.github.io" + $endlink }
+        default { return "https://raw.githubusercontent.com/chill-music/Hurricane-Spotx" + $endlink }
     }
 }
 
