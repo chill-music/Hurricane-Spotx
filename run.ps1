@@ -300,7 +300,7 @@ function Get-Link {
 
     switch ($mirror) {
         $true { return "https://hurricane-spotx-official.github.io/SpotX" + $endlink }
-        default { return "https://raw.githubusercontent.com/chill-music/Hurricane-Spotx/main" + $endlink }
+        default { return "https://raw.githubusercontent.com/chill-music/Hurricane-Spotx/tree/main" + $endlink }
     }
 }
 
